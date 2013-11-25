@@ -84,6 +84,7 @@ function desserts () {
             name: this.getAttribute('data-name'),
             size: this.getAttribute('data-size'),
             price: this.getAttribute('data-price')
+            position: this.getAttribute("data-position")
         };
 
         //push the new item on to the items array
@@ -95,6 +96,7 @@ function desserts () {
         //style class of 'cart-container'
         renderCart(cart, $(".cart-container"));
     });
+
 
     $('.place-order').click(function(){
         //TODO: validate the cart to make sure all the required
@@ -126,14 +128,30 @@ function renderCart(cart, container) {
 
         clonedTemplate.removeClass("template-cart");
         container.append(clonedTemplate);
+    }
 
-        //TODO: code to render the cart item
+    var total = 0;
+    var tax = 0;
+    var subTotal = 0;
+        for (idx = 0; idx < cart.items.length; idx++) {
+            total += Math.round(cart.items[idx].price);
+            $(".total-price").html(total);
+            tax = Math.round(total*0.095);
+            $(".tax").html(tax);
+            subTotal = Math.round(total + tax);
+            $(".subTotal").html(subTotal);
+    }
 
-    } //for each cart item
+    item = cart.items[idx];
+    item.attr(".data-index",[idx]);
+    console.log(".data-index");
+    //item.find(".name").html(".data-index");
+    //var position = (".data-index");
+    //item.splice(position,1);
 
-    //TODO: code to render sub-total price of the cart
-    //the tax amount (see instructions), 
-    //and the grand total
+    //by clicking on any of the buttons, we re render the array
+    //display the array
+
 
 
 //need index position for removal of the item

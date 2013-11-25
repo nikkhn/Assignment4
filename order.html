@@ -30,9 +30,11 @@
   </header>   
 
       <div class="page-header">
-        <h1>Menu</h1>
+        <h1>Order</h1>
       </div>
-
+      <h3>We deliver anywhere in the Seattle Area</h3>
+      <h4>Hours of Delivery: Noon - 11:00 pm</h4>
+      <h4>We accept cash or credit upon delivery</h4>
       <h4>All our pizzas are made with hand-thrown thin crust, baked in real wood ovens. <br> Choose from one of these sizes:</h4>
         <ol>
           <li>Small (12")</li>
@@ -48,10 +50,16 @@
                     <h2>Your Cart</h2>
                     <div class="cart-container"></div>
                       <div class="template-cart">
-                          <dl>
-                            <dd class="name">Name</dd>
-                            <dt class="price">
-                          </dl>
+                            <div class="col-xs-10">
+                              <ul>
+                            <li class="name"></li>
+                            <li class="price">
+                          </ul>
+                            </div>
+                            <div class="col-xs-2">
+                             <button class="add-to-cart remove" type="button" data-type="pizza" data-name="" data-size="medium" data-price="">X</button>
+                            </div>
+
                       </div>
                           
                         <div class="cart-footer">
@@ -62,6 +70,21 @@
                             <div class="col-xs-2">
                                 $<span class="total-price"></span>
                             </div>
+
+                            <div class="col-xs-10">
+                                Tax:
+                            </div>
+                            <div class="col-xs-2">
+                                $<span class="tax"></span>
+                            </div>
+
+                            <div class="col-xs-10">
+                                Sub Total:
+                            </div>
+                            <div class="col-xs-2">
+                                $<span class="subTotal"></span>
+                            </div>
+
                         </div>
                         <div class="row">
                             <div class="col-xs-12 button-row">
@@ -111,8 +134,7 @@
                 <dd class="price"></dd>
 
                 <button class="dessert add-to-cart" type="button" data-type="dessert" data-name="" data-price="">
-                   
-				</button>
+				        </button>
 
               </dl>
           </div>

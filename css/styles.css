@@ -171,10 +171,8 @@ h4 {
 
 .template-pizzas,
 .template-drinks,
-.template-desserts {
+.template-desserts,
+.template-cart {
   display: none;
 }
 
-.template-cart {
-  background-color: gray;
-}
