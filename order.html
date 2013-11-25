@@ -1,0 +1,128 @@
+
+<!doctype html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css">
+        <link rel="stylesheet" href="css/styles.css">
+
+         <title>Dawg Pizza</title>
+    </head>
+
+<div class="container">
+  <header>
+          <nav class="navbar navbar-inverse" role="navigation">
+  <!-- Brand and toggle get grouped for better mobile display -->
+     <div class="navbar-header">
+         <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+        </button>
+            <a class="navbar-brand" href="index.html">Home</a>
+            <a class="navbar-brand" href="about.html">About</a>
+            <a class="navbar-brand" href="menu.html">Menu</a>
+            <a class="navbar-brand" href="order.html">Order</a>
+            <a href="index.html"><img class= "logo" src="img/logo.png"> </a> 
+    </div>
+        </nav>
+  </header>   
+
+      <div class="page-header">
+        <h1>Menu</h1>
+      </div>
+
+      <h4>All our pizzas are made with hand-thrown thin crust, baked in real wood ovens. <br> Choose from one of these sizes:</h4>
+        <ol>
+          <li>Small (12")</li>
+          <li>Medium (14")</li>
+          <li>Large (17")</li>
+        </ol>
+
+      <img class="divide" src="img/divider.png" alt="horizontal divider">
+
+      <p class="disclaimer">All pizzas can be customized. <br> Add a few ingredients, or take a few off--for an extra $2.</p>
+
+      			  <div class="cart-container">
+                    <h2>Your Cart</h2>
+                    <dl class ="template-cart">  
+                      <dd class="name">Name:</dd>
+                        <dd class="price">Price:</dd>
+                  	</dl>
+                    <div class="cart-footer">
+                  	   <div class="row total-row">
+                            <div class="col-xs-10">
+                                Total:
+                            </div>
+                            <div class="col-xs-2">
+                                $<span class="total-price"></span>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-xs-12 button-row">
+                                <button type="button" class="btn btn-primary place-order">Place My Order</button>
+                            </div>
+                        </div>  
+                      </div>
+              	</div>
+
+
+
+              <div class="box-pizza">
+                    <h2>Pizza</h2>
+                    <dl class ="template-pizzas">  
+                      <dt class="name"></dt>
+                        <dd class="description"></dd>
+                        <dd class="prices"></dd>
+                        	<button class="large add-to-cart" type="button" data-type="pizza" data-name="" data-size="large" data-price="">
+							</button>
+                           <button class="medium add-to-cart" type="button" data-type="pizza" data-name="" data-size="medium" data-price="">
+							</button>
+							<button class="small add-to-cart" type="button" data-type="pizza" data-name="" data-size="small" data-price="">
+							</button>
+                  </dl>
+              </div>
+
+
+
+        <div class="col-md-6">
+          <div class="box-drinks">
+            <h2>Drinks</h2>
+              <dl class="template-drinks">
+                <dt class="name"></dt>
+                <dd class="price"></dd>
+                	<button class="drink add-to-cart" type="button" data-type="drink" data-name="" data-price="">      
+					</button>
+              </dl>
+            </div>
+          </div>
+
+        <div class="col-md-6">
+          <div class="box-desserts">
+          <h2>Dessert</h2>
+              <dl class="template-desserts">
+                <dt class="name"></dt>
+                <dd class="price"></dd>
+
+                <button class="dessert add-to-cart" type="button" data-type="dessert" data-name="" data-price="">
+                   
+				</button>
+
+              </dl>
+          </div>
+        </div>
+
+
+
+     </div>
+
+
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+        <script src="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
+        <script src="http://www.dawgpizza.com/orders/menu.js"></script>
+        <script src="js/order.js"></script>
+
+    </body>
+</html>
+
