@@ -83,8 +83,7 @@ function desserts () {
             type: this.getAttribute('data-type'),
             name: this.getAttribute('data-name'),
             size: this.getAttribute('data-size'),
-            price: this.getAttribute('data-price')
-            position: this.getAttribute("data-position")
+            price: this.getAttribute('data-price'),
         };
 
         //push the new item on to the items array
@@ -99,12 +98,14 @@ function desserts () {
 
 
     $('.place-order').click(function(){
+
         //TODO: validate the cart to make sure all the required
         //properties have been filled out, and that the 
         //total order is greater than $20 (see homework 
         //instructions) 
         postCart(cart, $('.cart-form'));
     });
+
 });
 
 // renderCart()
@@ -113,6 +114,7 @@ function desserts () {
 //  - cart (object) reference to the cart model
 //  - container (jQuery object) reference to the container <div>
 //
+
 function renderCart(cart, container) {
     var idx, item;
     //empty the container of whatever is in there currently
@@ -142,23 +144,29 @@ function renderCart(cart, container) {
             $(".subTotal").html(subTotal);
     }
 
-    item = cart.items[idx];
-    item.attr(".data-index",[idx]);
-    console.log(".data-index");
-    //item.find(".name").html(".data-index");
-    //var position = (".data-index");
-    //item.splice(position,1);
+    //find array index of associated item 
 
-    //by clicking on any of the buttons, we re render the array
+    this.removeItem = function(item){
+        var index = this.existsInCart(item);
+        if(index > -1){
+            this.items.splice(index,1);
+        }
+    };
+        i       
+        position = cart.items[idx];
+        container.find(".remove-item").attr("data-index");
+        var idxToRemove = this.getAttribute("data-index");
+        cart.items.splice(idxToRemove, 1);
+        renderCart(cart, $(".cart-container"));
+
+
+ //by clicking on any of the buttons, we re render the array
     //display the array
-
-
 
 //need index position for removal of the item
 //add data.index(0) for each item in cart
 //splice
 //render cart again
-
 } //renderCart()
 
 // postCart()
