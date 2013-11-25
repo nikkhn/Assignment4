@@ -120,7 +120,7 @@ function renderCart(cart, container) {
     for (idx = 0; idx < cart.items.length; idx++) {
         item = cart.items[idx];
         clonedTemplate = template.clone();
-        clonedTemplate.find(".name").html("kj");
+        clonedTemplate.find(".name").html("TEST TEST");
 
         clonedTemplate.removeClass("template-cart");
         container.append(clonedTemplate);
